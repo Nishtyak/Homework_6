@@ -4,8 +4,9 @@
 
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
+bool enterResult = true;
 double[] coordinate = EnterCoordinate();
-Console.WriteLine(Findintersection(coordinate));
+if(enterResult) Console.WriteLine(Findintersection(coordinate));
 
 double[] EnterCoordinate()
 {
@@ -19,7 +20,8 @@ double[] EnterCoordinate()
     {
         if(!double.TryParse(arr[i], out num)) 
         {
-            Console.WriteLine("Введите числa!");
+            Console.WriteLine("Вы введили не числa!");
+            enterResult = false;
             break;
         }
         else numArr[i] = double.Parse(arr[i]);

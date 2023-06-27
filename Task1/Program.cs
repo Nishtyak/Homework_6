@@ -23,7 +23,7 @@ int[] EnterNumbers()
     {
         if(!int.TryParse(arr[i], out num)) 
         {
-            Console.WriteLine("Введите числa!");
+            Console.WriteLine("Вы введили не числa!");
             enterResult = false;
             break;
         }
